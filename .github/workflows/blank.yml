@@ -27,5 +27,5 @@ jobs:
 #           python -m pip install --upgrade pip
 #           pip install requests
       - name: exec test
-        run: echo targets.txt | python3 test.py
+        run: cat targets.txt | python3 test.py
         # working-directory: ./ansible
