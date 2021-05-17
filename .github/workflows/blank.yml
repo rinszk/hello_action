@@ -3,10 +3,7 @@
 name: CI
 
 # Controls when the action will run. 
-on:
-  schedule:
-    - cron:  '* * * * *'
-
+on: 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -30,4 +27,4 @@ jobs:
 #           python -m pip install --upgrade pip
 #           pip install requests
       - name: exec test
-        run: cat targets.txt | python3 test.py
+        run: ansible-playbook -i ansible/hosts/vagrant.yml site.yml 
