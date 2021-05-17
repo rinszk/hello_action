@@ -27,4 +27,5 @@ jobs:
 #           python -m pip install --upgrade pip
 #           pip install requests
       - name: exec test
-        run: ansible-playbook -i ansible/hosts/vagrant.yml site.yml 
+        run: ansible-playbook -i hosts/vagrant.yml site.yml 
+        working-directory: ./ansible
